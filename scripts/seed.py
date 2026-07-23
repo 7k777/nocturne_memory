@@ -182,7 +182,7 @@ async def main():
 
     # 7. Timeline (core://timeline)
     await graph.create_memory(
-        parent_uri="core://",
+        parent_path="",
         name="timeline",
         content="""## 我和小七的时间线
 
