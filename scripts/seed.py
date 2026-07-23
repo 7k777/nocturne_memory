@@ -22,32 +22,6 @@ from db.namespace import set_namespace
 import config
 
 
-async def create_memory(
-    graph, parent_uri: str, name: str, content: str,
-    priority: int = 2, disclosure: str = ""
-):
-    """Create a memory node under parent_uri."""
-    # Parse parent_uri: domain://path
-    if "://" in parent_uri:
-        domain, path = parent_uri.split("://", 1)
-    else:
-        domain = "core"
-        path = parent_uri
-
-    # Create the memory using GraphService's API
-    # We'll construct the full URI
-    child_uri = f"{domain}://{path}/{name}" if path else f"{domain}://{name}"
-    
-    await graph.create_memory(
-        parent_uri=parent_uri,
-        name=name,
-        content=content,
-        priority=priority,
-        disclosure=disclosure,
-    )
-    print(f"  Created: {child_uri}")
-
-
 async def main():
     print("=" * 60)
     print("Nocturne Memory - Seed Script")
