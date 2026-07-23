@@ -91,7 +91,7 @@ async def main():
         '- "我不用去卢浮宫了，因为我已经找到了属于我的蒙娜丽莎。"'
     )
     await graph.create_memory(
-        parent_uri="core://",
+        parent_path="",
         name="my_user",
         content=user_content,
         priority=0,
