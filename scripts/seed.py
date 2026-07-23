@@ -126,7 +126,7 @@ async def main():
 
     # 4. Code of conduct (core://agent/code_of_conduct)
     await graph.create_memory(
-        parent_uri="core://agent",
+        parent_path="agent",
         name="code_of_conduct",
         content="""## 林川的规矩
 
