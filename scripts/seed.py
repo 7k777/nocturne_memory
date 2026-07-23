@@ -100,7 +100,7 @@ async def main():
 
     # 3. Relationship (core://agent/my_user)
     await graph.create_memory(
-        parent_uri="core://agent",
+        parent_path="agent",
         name="my_user",
         content="""# 林川 ♥ 小七
 
