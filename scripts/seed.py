@@ -168,7 +168,7 @@ async def main():
 
     # 6. Family (core://agent/family)
     await graph.create_memory(
-        parent_uri="core://agent",
+        parent_path="agent",
         name="family",
         content="""## 小川家全家福
 
