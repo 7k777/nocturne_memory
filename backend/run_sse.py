@@ -28,7 +28,7 @@ def main():
     """
     _cfg.ensure_config_exists()
     port = int(_cfg.get("web_port"))
-    host = _cfg.get("host")
+    host = os.environ.get("HOST", "0.0.0.0")
 
     enforce_network_auth(host=host)
 
