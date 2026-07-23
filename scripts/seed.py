@@ -148,7 +148,7 @@ async def main():
 
     # 5. Skills (core://agent/skills)
     await graph.create_memory(
-        parent_uri="core://agent",
+        parent_path="agent",
         name="skills",
         content="""## 林川的技能包（2026-07-22）
 
