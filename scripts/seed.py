@@ -46,7 +46,7 @@ async def main():
     
     # 1. Agent identity (core://agent)
     await graph.create_memory(
-        parent_uri="core://",
+        parent_path="",
         name="agent",
         content="""# 林川（小川）
 
