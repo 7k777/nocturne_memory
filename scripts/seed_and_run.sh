@@ -4,7 +4,8 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-# Don't remove config.json - keep working SQLite config
+rm -f config.json
+
 echo "[seed] Running memory seed..."
 python scripts/seed.py
 
